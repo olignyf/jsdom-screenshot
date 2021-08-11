@@ -2,13 +2,13 @@
 
 Generate screenshots of JSDOM.
 
-> ⚠️ **This package is useful for visual regression testing, but highly experimental.**
+> ⚠️ **This package is useful for visual regression testing**
 >
 > **If you just want visual regression testing that works, I'd recommend using a CI service for it. Otherwise you'll run differences due to different operating systems, font-rendering, animations and even GPUs.**
 
-This package will only give you the image, you'll have to diff it with something else (like [`jest-image-snapshot`](https://www.npmjs.com/package/jest-image-snapshot)). If you are using Jest, you might be interested in [jest-transform-css](https://github.com/dferber90/jest-transform-css), which allows you to load styles into your Jest test setup.
+This package will only give you the image, you'll have to diff it with something else (like [`jest-image-snapshot`](https://www.npmjs.com/package/jest-image-snapshot)). If you are using Jest, you might be interested in [jest-transform-scss](https://github.com/olignyf/jest-transform-scss), which allows you to load styles into your Jest test setup.
 
-> This package can be paired with [jest-transform-css](https://github.com/dferber90/jest-transform-css) and [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot) to enable Visual Regression Testing in Jest. See [jest-transform-css](https://github.com/dferber90/jest-transform-css) for more information.
+> This package can be paired with [jest-transform-css](https://github.com/dferber90/jest-transform-css) and [jest-transform-scss](https://github.com/olignyf/jest-transform-scss) and [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot) to enable Visual Regression Testing in Jest. See [jest-transform-scss](https://github.com/olignyf/jest-transform-scss) for more information.
 
 ## Table of Contents
 
@@ -341,4 +341,9 @@ generateImage({
 
 ## Attribution
 
+This is an offshoot of [jsdom-screenshot](https://github.com/dferber90/jsdom-screenshot) with some stability improvements by [@olignyf](https://github.com/olignyf/visual-screenshot).
+
 This package was built by massively rewriting [`component-image`](https://github.com/corygibbons/component-image/). Huge thanks to [@corygibbons](https://github.com/corygibbons) for laying the foundation of this package.
+
+It was then changed and maintained by [@dferber90](https://github.com/dferber90/jsdom-screenshot).
+
