@@ -341,9 +341,7 @@ generateImage({
 
 ## Attribution
 
-This is an offshoot of [jsdom-screenshot](https://github.com/dferber90/jsdom-screenshot) with some stability improvements by [@olignyf](https://github.com/olignyf/visual-screenshot).
+This is an offshoot of [jsdom-screenshot](https://github.com/dferber90/jsdom-screenshot) originally coded & maintained by [@dferber90](https://github.com/dferber90/jsdom-screenshot) along with [@corygibbons](https://github.com/corygibbons) for laying the foundation.
 
-This package was built by massively rewriting [`component-image`](https://github.com/corygibbons/component-image/). Huge thanks to [@corygibbons](https://github.com/corygibbons) for laying the foundation of this package.
-
-It was then changed and maintained by [@dferber90](https://github.com/dferber90/jsdom-screenshot).
+Some stability improvements were done by [@olignyf](https://github.com/olignyf/visual-screenshot).
 
