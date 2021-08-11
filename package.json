@@ -1,7 +1,7 @@
 {
-  "name": "jsdom-screenshot",
-  "version": "4.0.0",
-  "description": "Generate screenshots of jsdom",
+  "name": "visual-screenshot",
+  "version": "1.0.0",
+  "description": "Generate screenshots of an HTML page",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dferber90/jsdom-screenshot.git"
+    "url": "git+https://github.com/olignyf/jsdom-screenshot.git"
   },
   "keywords": [
     "jsdom",
@@ -18,10 +18,10 @@
     "puppeteer",
     "image"
   ],
-  "author": "Dominik Ferber",
+  "author": "Francois Oligny-Lemieux",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dferber90/jsdom-screenshot/issues"
+    "url": "https://github.com/olignyf/jsdom-screenshot/issues"
   },
   "dependencies": {
     "connect": "3.7.0",
