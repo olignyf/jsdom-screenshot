@@ -39,6 +39,7 @@ const createServer = async (html, { serve }) => {
   //
   // Inspired by https://gist.github.com/mikeal/1840641
   await new Promise((resolve, reject) => {
+
     const startServer = () => {
       // 0 assigns a random port, but it does not guarantee that it is unsed
       // We still need to handle that case
@@ -48,13 +49,15 @@ const createServer = async (html, { serve }) => {
           server.close(startServer);
         }
       });
+
       // 0 assigns a random port.
       // The port may be used, so we have to retry to find an unused port
       server.listen(0, (err) => {
-        console.error('server listen returned with err', err);
+        if (err) console.error('server listen returned with err', err);
         return (err ? reject(err) : resolve());
       });
     };
+
     startServer();
   });
   
