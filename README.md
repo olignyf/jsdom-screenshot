@@ -1,6 +1,8 @@
-# jsdom-screenshot
+# visual-screenshot
 
 Generate screenshots of JSDOM.
+
+This is a fork of jsdom-screenshot by [@dferber90](https://github.com/dferber90/jsdom-screenshot).
 
 > ⚠️ **This package is useful for visual regression testing**
 >
