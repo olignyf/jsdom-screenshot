@@ -71,7 +71,6 @@ const takeScreenshot = async (url, opts) => {
   const screenshotOptions = merge({}, opts.screenshot);
 
   try {
-
     // Options see:
     // https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions
     const browser = await puppeteer.launch(opts.launch);
@@ -115,10 +114,11 @@ const takeScreenshot = async (url, opts) => {
     
     return image; // NEW
   } catch (e) {
-    console.error('ERROR: exception during takeScreenshot', e);
+    console.error('ERROR: exception during takeScreenshot');
+    console.error(e);
   }
 
-  return NULL;
+  return null;
 };
 
 const generateImage = async options => {

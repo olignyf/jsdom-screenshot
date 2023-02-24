@@ -1,14 +1,38 @@
 # visual-screenshot
 
-Generate screenshots of JSDOM.
+Generate PNG screenshots of jsdom.
+- It extracts the current HTML from `document.documentElement.outerHTML`
+- Spawns a server that serves the HTML snapshot
+- Takes a PNG screenshot with puppeteer 
 
+You can pass options to puppeteer within the `launch` props of the options, example:
+
+```
+import { toMatchImageSnapshot } from 'jest-image-snapshot';
+expect.extend({toMatchImageSnapshot});
+
+jest.setTimeout(30000);
+
+const visualScreenshotOptions = {
+  launch: { headless: true, defaultViewport: {width: 1300, height: 1000} },
+  debug: false
+};
+
+test('abc', async () => {
+  (...)
+  const screenshot = await generateImage(visualScreenshotOptions);
+  expect(screenshot).toMatchImageSnapshot(); // requires package 'jest-image-snapshot'
+})
+```
+
+This package is maintained by [@olignyf](https://github.com/olignyf/visual-screenshot).
 This is a fork of jsdom-screenshot by [@dferber90](https://github.com/dferber90/jsdom-screenshot).
 
 > ⚠️ **This package is useful for visual regression testing**
 >
-> **If you just want visual regression testing that works, I'd recommend using a CI service for it. Otherwise you'll run differences due to different operating systems, font-rendering, animations and even GPUs.**
+> **If you just want visual regression testing that works reliably with different developers, I'd recommend running this package over a CI service. Otherwise you'll run differences due to different operating systems, font-rendering, animations and even GPUs.**
 
-This package will only give you the image, you'll have to diff it with something else (like [`jest-image-snapshot`](https://www.npmjs.com/package/jest-image-snapshot)). If you are using Jest, you might be interested in [jest-transform-scss](https://github.com/olignyf/jest-transform-scss), which allows you to load styles into your Jest test setup.
+This package will only give you the image, you'll have to diff it with something else (like [`jest-image-snapshot`](https://www.npmjs.com/package/jest-image-snapshot)). If you are using Jest, you might be interested in [jest-transform-scss](https://github.com/olignyf/jest-transform-scss), which allows you to compile and load styles into your Jest test setup.
 
 > This package can be paired with [jest-transform-css](https://github.com/dferber90/jest-transform-css) and [jest-transform-scss](https://github.com/olignyf/jest-transform-scss) and [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot) to enable Visual Regression Testing in Jest. See [jest-transform-scss](https://github.com/olignyf/jest-transform-scss) for more information.
 
